@@ -50,23 +50,23 @@ Our approach was evaluated against competitive baselines using two query sets (2
 
 The following figure illustrates the impact of bucket sizes (\( b = 0, 5, 10, 20 \)) on sampling probabilities, with smaller buckets introducing bias gradually:
 
-![Bucket Effect](plots/bucket_effect.png)
+![Bucket Effect](plots/bucket_effect.pdf)
 
 ### Bias Scores with Standard Deviation
 
 The figure below shows bias reduction across different standard deviation values (\( \sigma = 0.5, 1, 2, 3 \)) in our sampling strategy:
 
-![Standard Deviation Effect](plots/sigma_effect.png)
+![Standard Deviation Effect](plots/sigma_effect.pdf)
 
 ### Bias Scores
 
 Comparison of bias and performance between our approach and the baseline using BERT-mini, evaluated on two datasets with cut-offs at 10 and 20.
-![BERT](plots/LM_effect_bertmini.png)
+![BERT](plots/LM_effect_bertmini.pdf)
 
 
 Comparison of bias and performance between our approach and the baseline using MiniLM, evaluated on two datasets with cut-offs at 10 and 20
 
-![MiniLM](plots/LM_effect_minilm.png)
+![MiniLM](plots/LM_effect_minilm.pdf)
 
 ---
 
