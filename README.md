@@ -20,7 +20,7 @@ Our approach was evaluated against competitive baselines using two query sets (2
 
 - Significant reduction in gender bias (measured using ARaB, NFaiR, and LIWC metrics).
 - Maintenance of ranking effectiveness (MRR comparable or superior to baselines).
-- Generalizability across different language models (e.g., BERT-mini and MiniLM).
+- Generalizability across different language models (e.g., BERT-mini, MiniLM, and ELECTRA).
 
 ---
 
@@ -46,6 +46,18 @@ Our approach was evaluated against competitive baselines using two query sets (2
 
 ## Visualizations
 
+### Data Distribution
+
+The following figure displays the distribution of bias scores in the dataset:
+
+![Data Distribution](plots/distributions.png)
+
+### Bias-Performance Trade-off
+
+The following figure shows the trade-off between bias reduction and retrieval effectiveness when try variants of CL:
+
+![Bias-Performance Trade-off](plots/RQ1.png)
+
 ### Sampling Probability Distribution
 
 The following figure illustrates the impact of bucket sizes (\( b = 0, 5, 10, 20 \)) on sampling probabilities, with smaller buckets introducing bias gradually:
@@ -58,15 +70,11 @@ The figure below shows bias reduction across different standard deviation values
 
 ![Standard Deviation Effect](plots/sigma_effect.png)
 
-### Bias Scores
+### Bias Scores Across Models
 
-Comparison of bias and performance between our approach and the baseline using BERT-mini, evaluated on two datasets with cut-offs at 10 and 20.
-![BERT](plots/LM_effect_bertmini.png)
+Comparison of bias and performance between our approach and the baseline using BERT-mini, MiniLM, and ELECTRA, evaluated on two datasets with cut-offs at 10 and 20:
 
-
-Comparison of bias and performance between our approach and the baseline using MiniLM, evaluated on two datasets with cut-offs at 10 and 20
-
-![MiniLM](plots/LM_effect_minilm.png)
+![Model Comparisons](plots/LMs.png)
 
 ---
 
@@ -84,7 +92,9 @@ Comparison of bias and performance between our approach and the baseline using M
 Clone this repository and install dependencies:
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/OpenMatch/OpenMatch.git
+cd OpenMatch
+pip install -e .
 ```
 
 ---
@@ -188,7 +198,7 @@ If you find this repository useful in your research, please cite:
   title={Bias-aware Curriculum Sampling for Fair Ranking},
   author={},
   journal={TBD},
-  year={2024}
+  year={2025}
 }
 ```
 
